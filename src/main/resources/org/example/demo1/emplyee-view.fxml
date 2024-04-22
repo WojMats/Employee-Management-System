@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="org.example.demo1.Service">
+    <padding>
+        <javafx.geometry.Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Pracownicy -->
+    <VBox spacing="10.0">
+        <Label text="Pracownicy" />
+        <TableView fx:id="employeeTableView" />
+        <HBox spacing="10.0">
+            <TextField fx:id="searchTextfield" promptText="Wyszukaj pracownika" />
+            <Button onAction="#onSearchTextChanged" text="Szukaj" />
+            <Button onAction="#onAddEmployeeButtonClick" text="Dodaj pracownika" />
+           <Button onAction="#onSortButtonClick" text="Sortuj" />
+           <Button onAction="#onDeleteButtonClick" text="Usuń" />
+        </HBox>
+    </VBox>
+
+    <!-- Grupy pracownicze -->
+    <VBox spacing="10.0">
+        <Label text="Grupy pracownicze" />
+        <TableView fx:id="classEmployeeTableView" />
+        <Button onAction="#onAddGroupButtonClick" text="Dodaj grupę" />
+    </VBox>
+
+    <!-- Przyciski -->
+    <HBox spacing="10.0">
+        <Button onAction="#onModifyDataButtonClick" text="Modyfikuj dane" />
+    </HBox>
+</VBox>
